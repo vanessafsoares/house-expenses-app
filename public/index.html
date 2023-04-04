@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Controle de gastos residenciais</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Cadastro de pessoa</h1>
+    <form id="formPessoa" action="/pessoas" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome">
+      <br>
+      <label for="idade">Idade:</label>
+      <input type="number" name="idade" id="idade">
+      <br>
+      <input type="submit" value="Cadastrar">
+      <span id="iconeCadastro" style="display: none;" class="material-icons">check_circle</span>
+    </form>
+    <h1>Cadastro de transação</h1>
+    <form id="formTransacao" action="/transacoes" method="POST">
+      <label for="descricao">Descrição:</label>
+      <input type="text" name="descricao" id="descricao">
+      <br>
+      <label for="valor">Valor:</label>
+      <input type="number" name="valor" id="valor" step="0.01">
+      <br>
+      <label for="tipo">Tipo:</label>
+      <select name="tipo" id="tipo">
+        <option value="despesa">Despesa</option>
+        <option value="receita">Receita</option>
+      </select>
+      <br>
+      <label for="pessoa">Pessoa:</label>
+      <select name="pessoa" id="pessoa">
+        <!-- Lista de pessoas cadastradas -->
+      </select>
+      <br>
+      <input type="submit" value="Cadastrar">
+    </form>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
